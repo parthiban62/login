@@ -1,0 +1,35 @@
+<script type="text/javascript">
+$(function() {
+$('.password').pstrength();
+});
+</script>
+
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html =>{:multipart => true}) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+  <div><%='First Name'%><br/>
+<%=text_field_tag 'first_name'%></div>
+<div><%='Last Name'%><br/>
+<%=text_field_tag 'last_name'%></div>
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password,:class=>'password' %></div>
+  <%=file_field_tag 'image' %>
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+  
+
+
+ <a href="http://twitter.com/share" class="twitter-share-button" data-url="" data-text="this is the custom text." data-count="horizontal" data-via="MyTwitterAccountUsername">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" layout="button_count" show_faces="true" width="450" font=""></fb:like>
+
+<a href='https://plusone.google.com/_/+1/confirm?hl=en-US&url=http://caremonkey.com' onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en-US&url=http://caremonkey.com','popup','width=500,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=400,top=150'); return false"><img src="/images/googleplusicon.png" name="Image10" width="32" height="32" border="0" id="Image10" /></a>

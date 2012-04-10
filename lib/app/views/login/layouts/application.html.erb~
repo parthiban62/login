@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caremonkey</title>
+  <%= stylesheet_link_tag 'design.css'%>
+  <%= javascript_include_tag 'jquery.js','jquery.pstrength-min.1.2.js'%>
+</head>
+<body>
+<%if user_signed_in? %>
+<%=link_to "logout","/logout" %>
+<%end%>
+<%= yield %>
+
+</body>
+</html>
