@@ -5,16 +5,7 @@ ApplicationDemo::Application.routes.draw do
     put 'update_sign_up2',:on=>:collection
     get 'find_name',:on=>:member
   end
-  resources :carers
-  resources :profiles
-  resources :subjects
-  resources :safety_alerts
-  resources :notes
-  resources :operations
-  resources :family_histories
-  resources :immunisations
-  resources :emergency_contacts
-  resources :emergency_informations
+ 
   resources :attachments
 devise_for :users,:controllers => {:registrations => "registrations",:sessions=>"sessions",:passwords=>"passwords",:confirmations=>"confirmations"}
 root :to => "profiles#index"
